@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Storage event</title>
+    <script type="text/javascript">
+      function sendMessage(message) {
+        window.localStorage.setItem(message, 'intercom_message');
+        window.localStorage.removeItem(message);
+      }
+
+      function on(message, handler) {
+        window.addEventListener('storage', function(event) {
+          var message = event.key;
+          var isRemoved = !event.newValue;
+
+          if (!isRemoved) {
+            handler(message);
+          }
+        });
+      }
+
+      on('hello', console.log);
+    </script>
+  </head>
+  <body>
+    <p>Hello world</p>
+    <input type="text" id="txtMessage" />
+    <button onclick="sendMessage(document.getElementById('txtMessage').value)">
+      Send
+    </button>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "intercom",
+  "version": "1.0.0",
+  "description": "Small library to send simple messages between browser tabs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jberndsen/intercom.git"
+  },
+  "author": "Jeroen Berndsen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jberndsen/intercom/issues"
+  },
+  "homepage": "https://github.com/jberndsen/intercom#readme",
+  "dependencies": {
+    "express": "4.17.1"
+  }
+}
